@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.page-section {
+  min-height: 100dvh;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
 #desc-image {
   width: 250px;              /* Set desired width */
   height: 250px;             /* Set desired height (or aspect-ratio: 1 / 1) */
@@ -14,13 +24,22 @@
   display: block;            /* Removes default inline spacing underneath */
 }
 
-.description{
+
+/* Scrollable Pages */
+#description{
   min-height: 100dvh; /* Dynamic viewport height: fills the full screen on desktop and mobile */
   width: 100%;        /* Spans the full width of its parent */
   box-sizing: border-box;
 }
-
-
+#porfolio{
+  min-height: 100dvh; /* Dynamic viewport height: fills the full screen on desktop and mobile */
+  width: 100%;        /* Spans the full width of its parent */
+  box-sizing: border-box;
+}#blog{
+  min-height: 100dvh; /* Dynamic viewport height: fills the full screen on desktop and mobile */
+  width: 100%;        /* Spans the full width of its parent */
+  box-sizing: border-box;
+}
 .navbar {
     background-color: #333;
     font-size: 1.2em;
@@ -31,6 +50,7 @@
     top: 0;
     z-index: 1000;
 }
+
 
 .navbar ul {
     list-style: none;
