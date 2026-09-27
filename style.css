@@ -245,6 +245,100 @@ body {
 /* page 2 complete */
 
 
+  /* Container for the 3 side-by-side cards */
+.blog-container {
+  display: grid;
+  /* Creates 3 equal flexible columns that fit the page width */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px; /* Adjust or remove if you want full viewport-edge scaling */
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Base Card Styling for blog1, blog2, blog3 */
+.blog1, .blog2, .blog3 {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog1:hover, .blog2:hover, .blog3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Link wrapper stretching across the whole card */
+.blog1 a, .blog2 a, .blog3 a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Responsive Image Container */
+.blog-image-wrapper {
+  width: 100%;
+  height: 180px; /* Fixed height for uniform cards across all three */
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.blog1 img, .blog2 img, .blog3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents image distortion */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.blog1:hover img, .blog2:hover img, .blog3:hover img {
+  transform: scale(1.5);
+}
+
+/* Card Text Section */
+.blog-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blog-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.blog-content p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive adjustment for tablets & phones */
+@media (max-width: 900px) {
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* page 3 complete */
+
 
 #footer {
     background-color: #222;
