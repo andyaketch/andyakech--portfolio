@@ -111,276 +111,138 @@ body {
 }
 /* page 1 complete */
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* SCROLL ONE */
-.page-section {
-  min-height: 100dvh;
-  padding: 4rem 2rem;
-  box-sizing: border-box;
-}
-
-#desc-image {
-  width: 250px;              /* Set desired width */
-  height: 250px;             /* Set desired height (or aspect-ratio: 1 / 1) */
-  border-radius: 16px;       /* Controls the curvature of the corners */
-  overflow: hidden;          /* Crops the image edges to match the radius */
-  border: 2px solid #e2e8f0; /* Optional border */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
-}
-
-#desc-image img {
+/* Projects Main Container */
+.projects-container {
   width: 100%;
-  height: 100%;
-  object-fit: cover;         /* Prevents stretching; crops excess parts to fit */
-  display: block;            /* Removes default inline spacing underneath */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-
-/* Scrollable Pages */
-#description{
-  min-height: 100dvh; /* Dynamic viewport height: fills the full screen on desktop and mobile */
-  width: 100%;        /* Spans the full width of its parent */
-  box-sizing: border-box;
-}
-#porfolio{
-  min-height: 100dvh; /* Dynamic viewport height: fills the full screen on desktop and mobile */
-  width: 100%;        /* Spans the full width of its parent */
-  box-sizing: border-box;
-}#blog{
-  min-height: 100dvh; /* Dynamic viewport height: fills the full screen on desktop and mobile */
-  width: 100%;        /* Spans the full width of its parent */
-  box-sizing: border-box;
-}
-.navbar {
-    background-color: #333;
-    font-size: 1.2em;
-    padding: 1em;
-    text-align: right ;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+/* Section Header */
+.projects-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
 }
 
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.projects-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-main, #1e293b);
+  margin-bottom: 0.5rem;
 }
 
-.navbar ul li {
-    display: inline;
-    margin: 0 1em;
+.projects-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted, #64748b);
+  line-height: 1.6;
 }
 
-.navbar ul li a {
-    color: #fff;
+/* 2-Column Responsive Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
 }
 
-/* main content styling */
-.main-content {
-    padding-top: 5em;
-}
-
-section {
-    padding: 2em 1em;
-    text-align: center;
-}
-
-#home h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-#home p {
-    font-size: 1.2em;
-    color: #666;
-}
-
-.description {
-  min-height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
-  background-color: #f8fafc;
-  box-sizing: border-box;
-}
-
-.about-card {
-  max-width: 1050px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 3.5rem;
-  background: #ffffff;
-  padding: 3.5rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-  border: 1px solid #e2e8f0;
-}
-
-/* Image Container */
-.about-avatar {
-  flex-shrink: 0;
-  width: 260px;
-  height: 260px;
-  border-radius: 24px;
+/* Card Styling for project1 and project2 */
+.project1, .project2 {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: var(--radius, 12px);
   overflow: hidden;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.about-avatar img {
+/* Card Hover */
+.project1:hover, .project2:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Wrap*/
+.project1-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  position: relative;
+}
+
+
+.project1-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease, filter 0.3s ease;
 }
 
-/* Typography & Layout */
-.about-text h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 1rem;
+.project1:hover .project1-image img,
+.project2:hover .project1-image img {
+  transform: scale(1.06);
+  filter: brightness(1.02);
 }
 
-.about-text p {
-  color: #475569;
-  line-height: 1.7;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.about-text .lead {
-  font-size: 1.15rem;
-  color: #1e293b;
-  line-height: 1.6;
-}
-
-.about-text p:last-of-type {
-  margin-bottom: 1.75rem;
-}
-
-/* Call to Action Buttons */
-.about-actions {
+/* Text and Description Section */
+.project-content {
+  padding: 1.5rem;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
+/* Tech Badges */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.project-tag {
+  background-color: var(--accent-light, #eff6ff);
+  color: var(--accent-color, #2563eb);
+  font-size: 0.75rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
 }
 
-.btn.primary {
-  background: #2563eb;
-  color: #ffffff;
+.project-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main, #1e293b);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
 }
 
-.btn.primary:hover {
-  background: #1d4ed8;
+.project-content p {
+  font-size: 0.925rem;
+  color: var(--text-muted, #64748b);
+  line-height: 1.65;
+  margin: 0;
 }
 
-.btn.secondary {
-  border: 1px solid #cbd5e1;
-  color: #334155;
-  background: transparent;
-}
-
-.btn.secondary:hover {
-  background: #f1f5f9;
-}
-
-/* Mobile & Tablet Stacking */
-@media (max-width: 860px) {
-  .about-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    gap: 2rem;
+/* Responsive adjustment for tablets & mobile */
+@media (max-width: 820px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .about-avatar {
-    width: 200px;
+  .project-image-wrapper {
     height: 200px;
   }
-
-  .about-actions {
-    justify-content: center;
-  }
-}
-/* container*/
-
-
-.blog2 {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 1em;
-    padding: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    box-sizing: border-box;
-    transition: transform 0.3s;
-}
-.blog3 {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 1em;
-    padding: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    box-sizing: border-box;
-    transition: transform 0.3s;
-}
-.blog1 {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 1em;
-    padding: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    box-sizing: border-box;
-    transition: transform 0.3s; 
 }
 
-#blog img {
-  width: 100%;
-  height: 200px;        /* Or whatever uniform height you prefer */
-  object-fit: cover;    /* Crops neatly to fit the frame instead of squishing */
-  border-radius: 8px;   /* Optional: match card corners */
-  display: block;
-}
-
-#blog h3 {
-    font-weight: bold;
-    margin-bottom: 0.5em;
-}
-
-#blog p {
-    margin-bottom: 0.5em;
-    color: #666;
-}
-
-
-#blog img {
-    width: 100%;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#blog:hover {
-    transform: scale(1.05);
-}
+/* page 2 complete */
 
 
 
