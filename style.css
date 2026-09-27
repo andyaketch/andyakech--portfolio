@@ -31,7 +31,7 @@ body {
 .navbar a {
   text-decoration: none;
   color: #64748b;
-  font-weight: 500;
+  font-weight: 650;
   transition: color 0.2s ease;
 }
 
@@ -39,31 +39,26 @@ body {
   color: #2563eb;
 }
 
-/* Page Section Container */
+/* Page Itself */
+/* Page Section */
 .page-section {
   display: flex;
   justify-content: center;
-  padding: 4rem 1.5rem;
+  padding: 8rem 2rem;
 }
 
-/* Card Container: Flexbox Side-by-Side */
+/* Project Cards Container */
 #desc-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  max-width: 950px;
+  border: 5px  #64748b;
+  border-radius: 9 px;
+  max-width: 840px;
   width: 100%;
   padding: 3rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2.5rem;
-}
-
-/* Image Div & Avatar Styling */
-#desc-image-div {
-  flex-shrink: 0;
+  gap: 3rem;
 }
 
 #desc-image {
@@ -73,7 +68,6 @@ body {
   border-radius: 12px;
   border: 1px solid #e2e8f0;
   background-color: #eff6ff;
-  display: block;
 }
 
 /* Text */
@@ -84,12 +78,12 @@ body {
 }
 
 .lead {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 650;
   color: #1e293b;
 }
 
-#desc-text-div p:not(.lead) {
+#desc-text-div p:not(.lead) { /* the intro part except the part quoted above as lead */
   font-size: 0.975rem;
   color: #64748b;
   line-height: 1.65;
