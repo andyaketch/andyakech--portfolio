@@ -5,7 +5,7 @@ A single-page personal portfolio site built with plain HTML, CSS, and JavaScript
 ## Live Demo
 
 [https://andyaketch.github.io/andyaketch-portfolio/](https://andyaketch.github.io/andyaketch-portfolio/)
-*(replace with your actual GitHub Pages link once deployed)*
+
 
 ## Features
 
@@ -19,9 +19,9 @@ A single-page personal portfolio site built with plain HTML, CSS, and JavaScript
 
 ## Technologies Used
 
-- HTML5
-- CSS3 (Flexbox, Grid, media queries)
-- JavaScript (ES6 — arrays, objects, loops, DOM manipulation)
+- HTML
+- CSS
+- JavaScript 
 
 ## How to Run It Locally
 
@@ -34,6 +34,7 @@ A single-page personal portfolio site built with plain HTML, CSS, and JavaScript
 
 ## What I Learned
 
+I learnt preparation is the most concuming part of any project work, both mentally and physically.
 Working through this project reinforced how to separate content (data) from presentation
 (HTML/CSS) by keeping skills and projects as JavaScript arrays and looping through them to
 build the page, rather than hardcoding repeated markup by hand.

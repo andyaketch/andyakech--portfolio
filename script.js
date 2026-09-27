@@ -4,14 +4,17 @@ const projects = [
     description: "A PostGIS-based geospatial database and analysis project examining healthcare accessibility across Kenya's Arid and Semi-Arid Land (ASAL) counties. It brings together spatial data on health facilities and population distribution to identify gaps in access to care across these underserved regions, using PostGIS for spatial queries and analysis.",
     image: "Assets/desert.jpg",
     alt: "ASAL Healthcare Accessibility Mapping",
-    tags: ["PostGIS", "Spatial SQL", "Accessibility Modeling"]
+    tags: ["PostGIS", "Spatial SQL", "Accessibility Modeling"],
+    link:"https://medium.com/@andyaketch/left-behind-on-foot-mapping-healthcare-access-in-kenyas-forgotten-drylands-6115305d2d70" 
   },
   {
     title: "Kiambu County Land Use & Environment Study",
     description: "A remote sensing and machine learning study of environmental change in Kiambu County, Kenya. It combines RSEI (Remote Sensing Ecological Index) and LULC (Land Use/Land Cover) classification with SHAP analysis to interpret which factors are driving the changes detected in satellite imagery. The findings were written up as a Medium blog series, translating the technical analysis into a narrative on how the county's land and environment are shifting over time.",
     image: "Assets/ecology.jpg",
     alt: "Kiambu County Land Use and Environment Study",
-    tags: ["Remote Sensing", "Machine Learning", "SHAP Interpretability", "RSEI & LULC"]
+    tags: ["Remote Sensing", "Machine Learning", "SHAP Interpretability", "RSEI & LULC"],
+    link: "https://medium.com/@andyaketch/fifteen-years-of-data-about-kiambus-ecological-health-9fd3fe32ccf1"
+    
   }
 ];
 
@@ -30,7 +33,7 @@ function renderProjects() {
 
     // Create a new <article> element for this project
     const article = document.createElement("article");
-    article.className = "project1"; // reuses existing card styling from style.css
+    article.className = "project1"; // re-uses existing card styling from style.css doc
 
     // Fill it in with the project's info
     article.innerHTML = `

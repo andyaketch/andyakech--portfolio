@@ -67,8 +67,8 @@ body {
 }
 
 #desc-image {
-  width: 220px;
-  height: 220px;
+  width: 420px;
+  height: 420px;
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
@@ -245,7 +245,7 @@ body {
 
 
   /* Container for the 3 side-by-side cards */
-.blog-container {
+.project-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2.2rem;
