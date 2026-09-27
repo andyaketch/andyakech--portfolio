@@ -89,7 +89,7 @@ body {
   line-height: 1.65;
 }
 
-/* Breakpoint */
+/* Breakpoint - exceeds the given space, it  resorts to this*/
 @media (max-width: 768px) {
   #desc-card {
     flex-direction: column;
