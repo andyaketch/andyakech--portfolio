@@ -15,12 +15,10 @@ const projects = [
   }
 ];
 
-// This function builds the project cards and puts them on the page
+// build the project then insert them
 function renderProjects() {
-  // Find the empty container in the HTML
   const container = document.getElementById("projects-grid");
 
-  // Go through each project one by one
   for (let i = 0; i < projects.length; i++) {
     const project = projects[i];
 

@@ -5,7 +5,11 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 50;
+  font-style: normal;
+
   background-color: #f8fafc;
   color: #1e293b;
   line-height: 1.6;
@@ -59,6 +63,7 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 3rem;
+  box-shadow: 0 10px 15px -3px
 }
 
 #desc-image {
@@ -242,16 +247,14 @@ body {
   /* Container for the 3 side-by-side cards */
 .blog-container {
   display: grid;
-  /* Creates 3 equal flexible columns that fit the page width */
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.2rem;
   width: 100%;
-  max-width: 1200px; /* Adjust or remove if you want full viewport-edge scaling */
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.8rem;
 }
 
-/* Base Card Styling for blog1, blog2, blog3 */
+/* Card Styling for blog1, blog2, blog3 */
 .blog1, .blog2, .blog3 {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -259,16 +262,15 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px -1px ;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .blog1:hover, .blog2:hover, .blog3:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+   transform: translateY(-4px); /*moves the element upward by 4 pixels */
+   box-shadow: 0 10px 15px -3px /*negative spread radius pulls the shadow inward */; 
 }
 
-/* Link wrapper stretching across the whole card */
 .blog1 a, .blog2 a, .blog3 a {
   text-decoration: none;
   color: inherit;
@@ -277,7 +279,6 @@ body {
   height: 100%;
 }
 
-/* Responsive Image Container */
 .blog-image-wrapper {
   width: 100%;
   height: 180px; /* Fixed height for uniform cards across all three */
@@ -294,7 +295,7 @@ body {
 }
 
 .blog1:hover img, .blog2:hover img, .blog3:hover img {
-  transform: scale(1.5);
+  transform: scale(1.5) /*the zoom on the image*/; 
 }
 
 /* Card Text Section */
@@ -319,10 +320,10 @@ body {
   line-height: 1.5;
 }
 
-/* Responsive adjustment for tablets & phones */
+/* variable screen sizes */
 @media (max-width: 900px) {
   .blog-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr, 1fr;
   }
 }
 
@@ -338,11 +339,11 @@ body {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  max-width: 950px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   padding: 3rem 2.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px ;
 }
 
 /* Header Text */
@@ -353,8 +354,8 @@ body {
 }
 
 .contact-title {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 1.76rem;
+  font-weight: 650;
   color: #1e293b;
   margin-bottom: 0.5rem;
 }
@@ -362,17 +363,17 @@ body {
 .contact-subtitle {
   font-size: 0.95rem;
   color: #64748b;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
-/* Responsive Grid for Contact Items */
+/* Responsive Grid for Contacts */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
 }
 
-/* Individual Interactive Contact Card */
+/* Individual  Contact card */
 .contact-item {
   display: flex;
   align-items: center;
@@ -382,18 +383,18 @@ body {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease-in, border-color 0.2s ease-in, box-shadow 0.2s ease-in;
 }
 
 .contact-item:hover {
   transform: translateY(-2px);
   border-color: #2563eb;
-  box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 12px -2px;
 }
 
-/* Circular Icon Box */
+/* Icon Box */
 .contact-icon-wrapper {
-  width: 44px;
+  width: 144px;
   height: 44px;
   flex-shrink: 0;
   border-radius: 50%;
@@ -405,10 +406,10 @@ body {
 }
 
 .contact-icon-wrapper svg {
-  stroke: #2563eb;
+  stroke: #64748b;
 }
 
-/* Text Inside Card */
+/* the Text inside card */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -417,25 +418,24 @@ body {
 
 .contact-label {
   font-size: 0.8rem;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 600;
+  font-weight: 650;
   color: #64748b;
 }
 
 .contact-value {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 650;
   color: #1e293b;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Mobile Breakpoint */
+/* screen Breakpoint */
 @media (max-width: 640px) {
   #contact-card {
-    padding: 2rem 1.25rem;
+    padding: 2rem 1.34rem;
   }
 
   .contact-grid {
