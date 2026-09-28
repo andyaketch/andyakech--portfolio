@@ -1,6 +1,6 @@
-# Andy Aketch — Portfolio Website
+# Andy Aketch : Portfolio Website
 
-A single-page personal portfolio site built with plain HTML, CSS, and JavaScript.
+A single-page portfolio site built with plain HTML, CSS, and JavaScript.
 
 ## Live Demo
 
@@ -34,7 +34,7 @@ A single-page personal portfolio site built with plain HTML, CSS, and JavaScript
 
 ## What I Learned
 
-I learnt preparation is the most concuming part of any project work, both mentally and physically.
+I learnt preparation is the most consuming part of any project work, both mentally and physically.
 Working through this project reinforced how to separate content (data) from presentation
 (HTML/CSS) by keeping skills and projects as JavaScript arrays and looping through them to
 build the page, rather than hardcoding repeated markup by hand.
