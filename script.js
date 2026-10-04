@@ -51,5 +51,52 @@ function renderProjects() {
   }
 }
 
+const testimonialsData = [
+  {
+    title: "Julian",
+    description: "Integrating their custom autonomous picking bots completely transformed our warehouse throughput. The deployment was seamless, and the AI routing cut our order processing times by nearly 40% in the first quarter.",
+    image:"Assets/testimonial1.jpg",
+    alt: "Julian's Testimonial",
 
+  },
+  {
+    title: "Elena",
+    description: "Their lab built an adaptive computer-vision model for our diagnostic hardware that exceeded our accuracy benchmarks within weeks. The team’s deep expertise in robotics control and real-time inference made them feel like an extension of our internal team",
+    image: "Assets/testimonial2.jpg",
+    alt: "Elena's Testimonial", 
+  },
+    {
+    title: "Maya",
+    description: "From early prototyping to edge AI deployment in rugged field conditions, their robotic sensor integration delivered reliable performance where off-the-shelf options failed. They are our go-to partner for complex automation challenges.",
+    image: "Assets/testimonial3.jpg",
+    alt: "Maya's Testimonial",   
+  }
+];
+
+function renderTestimonials() {
+  const container = document.getElementById("testimonialsContainer");
+
+  container.innerHTML = "";
+
+  // Loop through every testimonial object in the array
+  testimonialsData.forEach((item) => {
+    const article = document.createElement("article");
+    article.className = "testimonial-card";
+
+    // Stamp the template using the individual item's properties
+    article.innerHTML = `
+      <div class="testimonial-image">
+        <img src="${item.image}" alt="${item.alt}">
+      </div>
+      <div class="testimonial-content">
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+      </div>
+    `;
+
+    container.appendChild(article);
+  });
+}
+
+renderTestimonials()
 renderProjects();
