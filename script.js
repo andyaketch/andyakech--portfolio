@@ -54,20 +54,20 @@ function renderProjects() {
 const testimonialsData = [
   {
     title: "Julian",
-    description: "Integrating their custom autonomous picking bots completely transformed our warehouse throughput. The deployment was seamless, and the AI routing cut our order processing times by nearly 40% in the first quarter.",
+    description: "Andy took our scattered project reports and turned them into a clean, functional portfolio site that actually shows our work instead of just listing it. The turnaround was fast, and he explained every design decision clearly along the way.",
     image:"Assets/testimonial1.jpg",
     alt: "Julian's Testimonial",
 
   },
   {
     title: "Elena",
-    description: "Their lab built an adaptive computer-vision model for our diagnostic hardware that exceeded our accuracy benchmarks within weeks. The team’s deep expertise in robotics control and real-time inference made them feel like an extension of our internal team",
+    description: "We needed a site that could present technical spatial data work to non-technical clients, and Andy nailed that balance. The layout, the project write-ups, everything communicated credibility without drowning people in jargon.",
     image: "Assets/testimonial2.jpg",
     alt: "Elena's Testimonial", 
   },
     {
     title: "Maya",
-    description: "From early prototyping to edge AI deployment in rugged field conditions, their robotic sensor integration delivered reliable performance where off-the-shelf options failed. They are our go-to partner for complex automation challenges.",
+    description: "Andy built our portfolio page from scratch — responsive, fast, and easy for us to update ourselves afterward. He was patient with revisions and clearly understood what we needed even when we struggled to describe it.",
     image: "Assets/testimonial3.jpg",
     alt: "Maya's Testimonial",   
   }
