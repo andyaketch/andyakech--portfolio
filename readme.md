@@ -4,7 +4,7 @@ A single-page portfolio site built with plain HTML, CSS, and JavaScript.
 
 ## Live Demo
 
-[https://andyaketch.github.io/andyaketch-portfolio/](https://andyaketch.github.io/andyaketch-portfolio/)
+[View my portfolio here](https://andyaketch.github.io/andyakech--portfolio/)
 
 
 ## Features
